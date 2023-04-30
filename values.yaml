@@ -1,0 +1,18 @@
+# define default database user, name, and password for PostgreSQL deployment
+auth:
+  enablePostgresUser: true
+  postgresPassword: "StrongPassword"
+  username: "flaskapp"
+  password: "password"
+  database: "hello_flask"
+
+# The postgres helm chart deployment will be using PVC postgresql-data-claim
+primary:
+  persistence:
+    enabled: true
+    existingClaim: "postgresql-data-claim"
+
+# alternatively can pass --set volumePermissions.enabled=true to the helm install command
+postgresql:
+  volumePermissions:
+    enaled: true
