@@ -7,7 +7,7 @@ minikube start
 minikube tunnel
 
 # build flask docker image and load into minikube
-docker build -it hello-flask:latest .
+docker build -t hello-flask:latest .
 minikube image load hello-flask:latest
 
 kubectl apply -f local-pv.yaml
