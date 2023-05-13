@@ -21,3 +21,4 @@ kubectl apply -f deployment.yaml
 ## Postgresql
 
 https://adamtheautomator.com/postgres-to-kubernetes/
+https://phoenixnap.com/kb/postgresql-kubernetes

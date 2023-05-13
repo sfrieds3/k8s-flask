@@ -32,3 +32,14 @@ spec:
     - port: 80
       targetPort: 5000
   type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pg-service
+spec:
+  selector:
+    app: postgresql-dev-0
+  ports:
+    - port: 5432
+  type: LoadBalancer
